@@ -4,6 +4,8 @@
 
 ## Welcome! 👋
 
+### Live Demo: <h4>[Expenses chart component](https://hilla10.github.io/expenses-chart-compontnet-main/)</h4>
+
 Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
