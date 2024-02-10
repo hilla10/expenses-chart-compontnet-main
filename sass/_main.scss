@@ -1,0 +1,177 @@
+.main {
+    max-width: rem(538);
+    width: 100%;
+    margin-top: 30px;
+
+    @include breakpointDown(mobile) {
+        max-width: 94%;
+        width: 100%;
+        margin: auto;
+        transform: translateY(rem(-118));
+    }
+
+    &__header {
+        width: 100%;
+        background: $softRed;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(30) rem(38);
+        color: $veryPaleOrange;
+
+        @include breakpointDown(mobile) {
+            padding: rem(16) rem(30);
+        }
+
+        &-text {
+            transform: translateX(-5px);
+
+        }
+
+        @include breakpointDown(mobile) {
+            img {
+                width: 60px;
+                transform: translateX(10px);
+            }
+        }
+
+    }
+
+    &__chart {
+        background: $veryPaleOrange;
+        padding: rem(32) rem(38);
+        border-radius: 15px;
+        margin-top: rem(24);
+        width: 100%;
+
+        h1 {
+            transform: translate(-14px, -15px);
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 62px;
+            border-bottom: 2px solid $cream;
+            padding-bottom: rem(30);
+
+
+            @include breakpointDown(mobile) {
+                gap: 10px;
+                justify-content: center;
+                margin-top: 0px;
+                transform: translate(4px, rem(37));
+            }
+
+            &__col {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+
+            }
+
+            &__col__data {
+                position: relative;
+                width: 50px;
+                transition: opacity 0.4s;
+                cursor: pointer;
+                background: $softRed;
+                border-radius: 10px;
+
+                &.active {
+                    background: $cyan;
+                }
+
+                @include breakpointDown(mobile) {
+                    width: 35px;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                &:hover .popup {
+                    visibility: visible;
+                }
+
+                .popup {
+                    visibility: hidden;
+                    position: absolute;
+                    top: rem(-52);
+                    left: 50%;
+                    width: auto;
+                    font-size: rem(18);
+                    font-weight: 700;
+                    padding: 10px;
+                    background: $darkBrown;
+                    color: $veryPaleOrange;
+                    margin: auto;
+                    transform: translate3d(-50%, 0, 0);
+                    border-radius: 10px;
+
+
+                }
+            }
+
+            &__col__day {
+                color: $mediumBrown;
+
+                @include breakpointDown(mobile) {
+                    padding-left: 5px;
+                    padding-top: 10px;
+                    font-size: rem(14);
+                }
+            }
+        }
+
+        &-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 32px;
+            color: $darkBrown;
+
+            h1 {
+                font-size: rem(50);
+                padding-top: 10px;
+            }
+
+            @include breakpointDown(mobile) {
+                transform: translateY(32px);
+
+                h1 {
+                    font-size: rem(30);
+                }
+
+                p {
+                    transform: translate(-13px, -16px);
+                    font-size: rem(16);
+                }
+            }
+
+
+            &__col:nth-child(2) {
+                text-align: right;
+                padding-top: 20px;
+                transform: translateX(2px);
+
+                p {
+                    transform: translate(18px, -15px);
+                }
+
+                h3 {
+                    transform: translate(19px, -12px);
+                    font-size: rem(16);
+                }
+
+            }
+
+        }
+    }
+}
